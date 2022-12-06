@@ -1,0 +1,20 @@
+def solve():
+  n = int(input())
+  s = input()
+  flag = False
+  i = 0
+  while i < n:
+    if flag:
+      if i+1 >= n or s[i] != s[i+1]:
+        print('NO')
+        return
+      else:
+        i += 1
+    flag = not flag
+    i += 1
+    
+  print('YES')
+ 
+t = int(input())
+for _ in range(t):
+  solve()
